@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hCaptcha Token Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>hCaptcha Token Generator</h1>
+        <p>Complete the captcha below to generate a token for testing your backend implementation.</p>
+        
+        <div class="captcha-container">
+            <div class="h-captcha" id="hcaptcha-widget" data-callback="onCaptchaSuccess"></div>
+        </div>
+        
+        <div class="result-container" id="resultContainer" style="display: none;">
+            <h3>Generated Token:</h3>
+            <textarea id="tokenOutput" readonly></textarea>
+            <button id="copyBtn" onclick="copyToken()">Copy Token</button>
+            <button id="testBtn" onclick="testToken()">Test Backend</button>
+        </div>
+        
+        <div class="backend-test" id="backendTest" style="display: none;">
+            <h3>Backend Test:</h3>
+            <input type="text" id="backendUrl" placeholder="http://localhost:3000/verify-captcha" />
+            <button onclick="verifyWithBackend()">Test</button>
+            <div id="testResult"></div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

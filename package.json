@@ -1,0 +1,15 @@
+{
+  "name": "hcaptcha-token-generator",
+  "version": "1.0.0",
+  "description": "A simple tool to generate hCaptcha tokens for testing backend implementations.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
