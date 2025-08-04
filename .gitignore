@@ -1,0 +1,17 @@
+.vscode/
+build/
+
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+bower_components
+
+# Ignore built ts files
+dist/**/*
+
+
+
+package-lock.json
+
